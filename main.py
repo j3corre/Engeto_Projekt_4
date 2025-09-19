@@ -28,6 +28,7 @@ def zobrazit_ukoly():
 def odstranit_ukol():
     zobrazit_ukoly()
     if not ukoly:
+        print("Žádné úkoly k odstranění.")
         return
     try:
         index = int(input("Zadejte číslo úkolu, který chcete odstranit: ")) - 1
