@@ -1,5 +1,5 @@
 
-# Testovací případy pro jednoduchý Task manager
+# Testovací případy pro jednoduchý Task manager pro hlavni_menu()
 ## TC01
 Popis: Ověření, že volba čísla 1 v hlavním menu správně spustí funkci `pridat_ukol()`.
 
