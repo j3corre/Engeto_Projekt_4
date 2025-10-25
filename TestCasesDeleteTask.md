@@ -54,7 +54,11 @@ Kroky testu:
 
 Očekávaný výsledek: Program spustí funkci `odstranit_ukol()` a odstraní postupně všechny úkoly.
 
-Skutečný výsledek: Funkce `odstranit_ukol()` byla spuštěna a program zobrazil výzvu k zadání čísla úkolu k odstranění. Po zadání čísla úkolu byl skutečně úkol odstraněn. Po odstranění všech úkolů se vypsala hláška *Žádné úkoly k odstranění* a nešlo zadat další úkol k odstranění.
+Skutečný výsledek: Funkce `odstranit_ukol()` byla spuštěna a program zobrazil výzvu k zadání čísla úkolu k odstranění. Po zadání čísla úkolu byl skutečně úkol odstraněn. Po odstranění všech úkolů se vypsala hláška 
+'''
+Žádné úkoly k odstranění
+'''
+a nešlo zadat další úkol k odstranění.
 
 Stav: **Pass**
 
