@@ -5,6 +5,7 @@ author: Jan Bláha
 email: jan.blaha@bcas.cz
 """
 
+
 def hlavni_menu():
     print("\nSprávce úkolů - Hlavní menu")
     print("1. Přidat nový úkol")
@@ -12,11 +13,13 @@ def hlavni_menu():
     print("3. Odstranit úkol")
     print("4. Ukončit program")
 
+
 def pridat_ukol():
     nazev = input("Zadejte název úkolu: ")
     popis = input("Zadejte popis úkolu: ")
     ukoly.append({"nazev": nazev, "popis": popis})
     print(f"Úkol '{nazev}' byl přidán.")
+
 
 def zobrazit_ukoly():
     print("\nSeznam úkolů:")
@@ -24,6 +27,7 @@ def zobrazit_ukoly():
         print("Žádné úkoly k zobrazení.")
     for i, ukol in enumerate(ukoly, 1):
         print(f"{i}. {ukol['nazev']} - {ukol['popis']}")
+
 
 def odstranit_ukol():
     zobrazit_ukoly()
@@ -40,6 +44,7 @@ def odstranit_ukol():
     except ValueError:
         print(f"Prosím zadejte platné celé číslo v intervalu 1 až {len(ukoly)}.")
 
+
 def main():
     print("Vítejte v programu Task manager.")
 
@@ -47,17 +52,18 @@ def main():
         hlavni_menu()
         volba = input("Vyberte možnost (1-4): ")
 
-        if volba == '1':
+        if volba == "1":
             pridat_ukol()
-        elif volba == '2':
+        elif volba == "2":
             zobrazit_ukoly()
-        elif volba == '3':
+        elif volba == "3":
             odstranit_ukol()
-        elif volba == '4':
+        elif volba == "4":
             print("\nKonec programu.")
             break
         else:
-            print("Neplatná volba, zkuste to znovu.")  
+            print("Neplatná volba, zkuste to znovu.")
+
 
 ukoly = []
 
