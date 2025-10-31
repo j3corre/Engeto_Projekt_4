@@ -56,9 +56,12 @@ def odstranit_ukol(ukoly: list, index: int) -> dict | None:
         index (int): Index úkolu k odstranění.
     """
 
+    index -= 1  # Převod na nulový index
+
     if index < 0 or index >= len(ukoly):
         print("Neplatný index úkolu.")
         return None
+    
     return ukoly.pop(index)
 
 def vrat_cislo(prompt: str, min_hodnota: int, max_hodnota: int) -> int:
@@ -104,7 +107,7 @@ def main():
                     print("\nŽádné úkoly k odstranění.")
                 else:
                     zobrazit_ukoly(ukoly)
-                    odstraneny_ukol = odstranit_ukol(ukoly, vrat_cislo("Zadejte číslo úkolu k odstranění: ", 1, len(ukoly)) - 1)
+                    odstraneny_ukol = odstranit_ukol(ukoly, vrat_cislo("Zadejte číslo úkolu k odstranění: ", 1, len(ukoly)))
                     if odstraneny_ukol:
                         print(f"Úkol '{odstraneny_ukol['nazev']}' byl odstraněn.")
             case "4":
@@ -113,4 +116,5 @@ def main():
             case _:
                 print("Neplatná volba, zkuste to znovu.")
 
-main()
+if __name__ == "__main__":
+    main()
